@@ -5,6 +5,10 @@ export const HabitForm = () => {
   const areFieldsFull =
     state?.habitsForm?.title?.length === 0 ||
     state?.habitsForm?.description?.length === 0;
+  const clearAndCloseForm = () => {
+    setShowDialogBox(false);
+    dispatch({ type: "CLEAR_FORM" });
+  };
   return (
     <>
       {" "}
@@ -12,7 +16,7 @@ export const HabitForm = () => {
         <div className="dialog-box">
           <i
             class="fa-solid fa-square-xmark cross"
-            onClick={() => setShowDialogBox(false)}
+            onClick={clearAndCloseForm}
           ></i>
           <h1>New Habit</h1>
           <label>

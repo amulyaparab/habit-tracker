@@ -126,6 +126,19 @@ export const DataProvider = ({ children }) => {
           ...state,
           habitsForm: action.payload,
         };
+      case "CLEAR_FORM":
+        return {
+          ...state,
+          habitsForm: {
+            id: uuid(),
+            title: "",
+            description: "",
+            repeat: "",
+            goal: "",
+            time: "",
+            startDate: "",
+          },
+        };
       default:
         return state;
     }
