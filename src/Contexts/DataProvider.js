@@ -11,6 +11,7 @@ const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [showDialogBox, setShowDialogBox] = useState(false);
+  const [loading, setLoading] = useState(true);
   const fetchHabits = async () => {
     try {
       const {
@@ -20,6 +21,8 @@ export const DataProvider = ({ children }) => {
       dispatch({ type: "INITIAL_HABITS", payload: habits });
     } catch (err) {
       console.log(err);
+    } finally {
+      setLoading(false);
     }
   };
   const reducer = (state, action) => {
@@ -147,7 +150,7 @@ export const DataProvider = ({ children }) => {
 
   return (
     <DataContext.Provider
-      value={{ state, dispatch, showDialogBox, setShowDialogBox }}
+      value={{ state, dispatch, showDialogBox, setShowDialogBox, loading }}
     >
       {children}
     </DataContext.Provider>
