@@ -54,6 +54,29 @@ export const DataProvider = ({ children }) => {
           ...state,
           habits: [...state.habits, state.habitsForm],
         };
+      case "DELETE_HABIT":
+        return {
+          ...state,
+          habits: state.habits.filter(
+            (habit) => habit.id !== action.payload.id
+          ),
+        };
+      case "ARCHIVE_HABIT":
+        return {
+          ...state,
+          habits: state.habits.filter(
+            (habit) => habit.id !== action.payload.id
+          ),
+          archives: [...state.archives, action.payload],
+        };
+      case "UNARCHIVE_HABIT":
+        return {
+          ...state,
+          archives: state.archives.filter(
+            (habit) => habit.id !== action.payload.id
+          ),
+          habits: [...state.habits, action.payload],
+        };
       default:
         return state;
     }
@@ -68,6 +91,7 @@ export const DataProvider = ({ children }) => {
       time: "",
       startDate: "",
     },
+    archives: [],
   };
   useEffect(() => {
     fetchHabits();

@@ -54,7 +54,7 @@
 }
 .dialog-box {
   width: 300px;
-  height: 500px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   background-color: #282c34;
@@ -87,4 +87,15 @@ select {
   right: 3rem;
   font-size: 20px;
   cursor: pointer;
+}
+.dialog-box button {
+  padding: 0.5rem 0;
+  font-size: medium;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  border: none;
+  color: white;
+  font-weight: 500;
+  margin-top: 1rem;
 }
