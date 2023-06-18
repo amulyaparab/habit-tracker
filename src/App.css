@@ -61,6 +61,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  width: 220px;
+  height: 160px;
+  border: #282c34 solid;
+  margin-top: 0;
+  margin-left: 0;
+  background-color: #282c34;
 }
 .habit h1:hover {
   color: cornflowerblue;

@@ -13,7 +13,7 @@ export const Archives = () => {
       <div className="habits">
         {state?.archives?.map((habit) => (
           <div className="habit">
-            <p>{habit?.title}</p>
+            <h1>{habit?.title}</h1>
             <button
               onClick={() =>
                 dispatch({ type: "UNARCHIVE_HABIT", payload: habit })
