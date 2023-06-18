@@ -10,6 +10,7 @@ export const Archives = () => {
         Go to habits
       </button>
       <h1>Archives</h1>
+      {state?.archives?.length === 0 && <h1>No Archives Found.</h1>}
       <div className="habits">
         {state?.archives?.map((habit) => (
           <div className="habit">
