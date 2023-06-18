@@ -46,11 +46,44 @@
 .habit {
   width: 300px;
   height: 200px;
-  border: 2px solid black;
+  border-radius: 10px;
+
+  background-image: url("https://images.unsplash.com/photo-1613375920388-f1f70f341f8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  position: relative;
+}
+.habit h1 {
+  color: #ffffff;
   cursor: pointer;
+  margin: auto;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.habit h1:hover {
+  color: cornflowerblue;
 }
 .habit-button {
-  margin: 1rem 0;
+  margin: 0.2rem 0 0 0;
+  border: none;
+  font-size: 27px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+.habit button {
+  padding: 0.5rem 1rem;
+  font-size: medium;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  margin-bottom: -10px;
 }
 .dialog-box {
   width: 300px;
@@ -63,6 +96,7 @@
   text-align: left;
   padding: 3rem;
   border-radius: 10px;
+  position: relative;
 }
 .dialog-box input,
 select {
@@ -80,6 +114,15 @@ select {
 }
 .overlay {
   position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cross {
   position: absolute;
@@ -98,4 +141,34 @@ select {
   color: white;
   font-weight: 500;
   margin-top: 1rem;
+}
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.edit {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.go-to {
+  font-size: large;
+  padding: 0.7rem 2rem;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.go-to:hover {
+  background-color: #ffffff;
+  color: cornflowerblue;
 }

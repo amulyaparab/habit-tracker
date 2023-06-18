@@ -6,7 +6,9 @@ export const Archives = () => {
   const navigate = useNavigate();
   return (
     <>
-      <button onClick={() => navigate("/")}>Go to habits</button>
+      <button className="go-to" onClick={() => navigate("/")}>
+        Go to habits
+      </button>
       <h1>Archives</h1>
       <div className="habits">
         {state?.archives?.map((habit) => (
